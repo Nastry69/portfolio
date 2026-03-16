@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>Tristan DZIOCH Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -32,7 +33,7 @@
         <div class="home-content">
             <h1>Bonjour, c'est <span>Tristan</span></h1>
             <h3>Je suis un <span>développeur Full-Stack</span></h3>
-            <p>passionné par l'informatique. Et en reconversion professionnelle.</p>
+            <p>passionné par l'informatique. En reconversion professionnelle.</p>
     
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/tristan-dzioch/"><i class='bx bxl-linkedin'></i></a>
@@ -53,20 +54,24 @@
 
     <section class="about" id="about">
         <div class="about-img">
-            <img src="/assets/image.png" alt="">
+            <img src="/assets/Moi.png" alt="">
         </div>
 
         <div class="about-content">
             <h2>A propos de <span>moi</span></h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Eligendi et cupiditate obcaecati dolore voluptas itaque molestias accusantium reiciendis aliquam 
-                eveniet omnis deserunt, magnam soluta natus cumque id, debitis quis quas.</p>
+            <p>Je suis Tristan, développeur Full-Stack passionné par le développement web et les nouvelles technologies.
+                Actuellement en reconversion professionnelle, je me forme activement à la création d'applications modernes
+                et performantes.
+            
+                J'aime concevoir des interfaces intuitives et développer des solutions robustes côté serveur.
+                Curieux et motivé, je cherche constamment à améliorer mes compétences et à travailler sur des projets
+                concrets qui apportent de la valeur aux utilisateurs.</p>
             <a href="#" class="btn">Lire plus</a>
-        </div>
+            </div>
 
     </section>
 
-    <section class="skill" id="skill">.
+    <section class="skill" id="skill">
         <h2 class="heading">Mes compétences</h2>
     
         <div class="services-container">
@@ -74,24 +79,29 @@
                 <div class="service-info">
                     <i class='bx bxl-figma'></i>
                     <h4>UI/UX Design</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Quisquam, voluptatum.</p>
+                    <p>Conception d'interfaces modernes, ergonomiques et centrées utilisateur.
+                        Création de maquettes et prototypes avec Figma et respect des bonnes pratiques
+                        d'expérience utilisateur.</p>
                 </div>
             </div>
             <div class="service-box">
                 <div class="service-info">
                     <i class='bx bx-code'></i>
                     <h4>Frontend</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Quisquam, voluptatum.</p>
+                    <p>Développement d'interfaces web interactives avec HTML, CSS, JavaScript, PHP.
+                       Création de sites responsives, animations modernes et intégration
+                       d'interfaces performantes.</p>
                 </div>
             </div>
             <div class="service-box">
                 <div class="service-info">
                     <i class='bx bx-code-curly'></i>
                     <h4>Backend</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Quisquam, voluptatum.</p>
+                    <p>
+                        Développement de la logique serveur et des APIs pour applications web.
+                        Gestion des bases de données et création d'architectures solides
+                        pour des applications évolutives.
+                    </p>
                 </div>
             </div>
         </div>
@@ -140,7 +150,7 @@
 
             <div class="projects-card">
                 <img src="/assets/Petcare.png" alt="Petcare">
-                <h3> Petcare</h3>
+                <h3> Petcare (En cours)</h3>
                 <p>Projet de fin d'études pour le développement d'une application de gestion de soins vétérinaires.</p>
                 <div class="btn">Voir plus</div>
             </div>
@@ -151,25 +161,27 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contacter <span>moi</span></h2>
 
-        <form action="#">
+        <form id="contact-form">
 
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" name="Nom" placeholder="Nom complet">
-                    <input type="email" name="Email" placeholder="Email">
+                    <input type="text" name="name" placeholder="Nom complet">
+                    <input type="email" name="email" placeholder="Email">
                 </div>
                 <div class="input-box">
-                    <input type="number" name="Téléphone" placeholder="Téléphone">
-                    <input type="text" name="Sujet" placeholder="Sujet">
+                    <input type="number" name="phone" placeholder="Téléphone">
+                    <input type="text" name="subject" placeholder="Sujet">
                 </div>
             </div>
 
             <div class="input-group-2">
-                <textarea name="Message" placeholder="Votre message" cols="30" rows="10"></textarea>
+                <textarea name="message" placeholder="Votre message" cols="30" rows="10"></textarea>
                 <input type="submit" value="Envoyer le message" class="btn">
             </div>
 
         </form>
+
+        <p id="form-message" class="form-message"></p>
     </section>
 
     <footer class="footer">
@@ -187,8 +199,12 @@
 
         <p class="copyright">&copy; 2026 Tristan DZIOCH. Tous droits réservés.</p>
     </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+    (function () {
+        emailjs.init("iSW2Jrx0lgbecBlcr");
+    })();
+</script>
     </body>
     
     </html>
